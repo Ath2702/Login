@@ -1,0 +1,117 @@
+/* File: style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  color: aqua;
+  text-align: center;
+  transition: transform 0.5s ease;
+  font-size: 3em;
+  padding-top: 50px;
+}
+
+@keyframes zoom {
+  from { transform: scale3d(1); }
+  to   { transform: scale3d(1.2); }
+}
+
+header:hover{
+  transform-style: preserve-3d;
+  transform: scale3d(1.2, 1.2, 1.2);
+  opacity: 0.8;
+}
+
+p{
+  color: bisque;
+  font-size: 1.25rem; /* smaller so it fits nicely on mobile */
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+body{
+  /* background image from pexels (same as earlier). Keep the URL as-is or replace it. */
+  background-image: url("https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+/* label class */
+.s{
+  color: pink;
+  font-size: 18px;
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+/* form card */
+form{
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* inputs */
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 8px;
+  outline: none;
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+}
+
+/* placeholder color for readability */
+input::placeholder {
+  color: #ddd;
+}
+
+/* submit button */
+button{
+  color: goldenrod;
+  font-size: 18px;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: transparent;
+  width: 100%;
+  border: 2px solid bisque;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover{
+  color: #fff;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 10px;
+  transform: translateY(-2px);
+}
+
+/* responsive tweaks */
+@media (max-width: 480px) {
+  header { font-size: 2.2rem; padding-top: 30px; }
+  p { font-size: 1rem; padding-top: 12px; }
+  form { padding: 16px; }
+  input { font-size: 15px; }
+  button { font-size: 16px; padding: 10px; }
+}
